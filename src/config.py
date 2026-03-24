@@ -11,3 +11,6 @@ OPENAI_EMBEDDING_MODEL = os.getenv("OPENAI_EMBEDDING_MODEL", "text-embedding-3-s
 DOCS_DIR = "data/docs"
 CHROMA_DIR = "db/chroma"
 MEMORY_FILE = "db/memory.json"
+
+if not OPENAI_API_KEY:
+    raise ValueError("OPENAI_API_KEY 未配置，请检查 .env")
